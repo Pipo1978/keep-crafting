@@ -22,7 +22,7 @@ server_scripts {
      'server/lib.lua',
      'server/blueprints.lua',
      'server/server_main.lua',
-     'server/server_lib/server_lib_entry.lua'
+     --'server/server_lib/server_lib_entry.lua'
 }
 
 -- dependency 'oxmysql'
