@@ -334,7 +334,7 @@ function menu:crafting_menu(item, data)
           },
           {
                header = Lang:t('menu.craft'),
-               subheader = 'craft current item',
+               subheader = Lang:t("menu.craft_descr_menu"),
                icon = 'fa-solid fa-pen-ruler',
                action = function()
                     TriggerServerEvent('keep-crafting:server:craft_item', {
@@ -347,7 +347,7 @@ function menu:crafting_menu(item, data)
           },
           {
                header = Lang:t('menu.check_mat_list'),
-               subheader = 'check inventory for required materials',
+               subheader = Lang:t("menu.mat_descr_list"),
                icon = 'fa-solid fa-clipboard-check',
                action = function()
                     TriggerServerEvent('keep-crafting:check_materials_list', {
@@ -610,7 +610,7 @@ function QbMenu:crafting_menu(args)
           },
           {
                header = Lang:t('menu.craft'),
-               txt = 'craft current item',
+               txt = Lang:t('menu.craft_descr_menu'),
                icon = 'fa-solid fa-pen-ruler',
                params = {
                     args     = {
@@ -625,7 +625,7 @@ function QbMenu:crafting_menu(args)
           },
           {
                header = Lang:t('menu.check_mat_list'),
-               txt = 'check inventory for required materials',
+               txt = Lang:t("menu.mat_descr_list"),
                icon = 'fa-solid fa-clipboard-check',
                params = {
                     args = { 'sell', item, Workbench.id },
