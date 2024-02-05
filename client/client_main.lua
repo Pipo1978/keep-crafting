@@ -22,7 +22,7 @@ local spawn_bench = function(model, coord, rotation)
      exports['qb-target']:AddTargetEntity(entity, {
           options = { {
                icon = "fas fa-sack-dollar",
-               label = "Craft",
+               label = Lang:t('menu.craft'),
                action = function(entity)
                     local state, workbench = GetClosest_Workbenches()
                     Workbench = workbench
@@ -147,9 +147,9 @@ end
 RegisterNetEvent('keep-crafting:client:start_crafting', function(data, item_config)
      local plyped = PlayerPedId()
 
-     TriggerEvent('animations:client:EmoteCommandStart', { "mechanic4" })
+     TriggerEvent('animations:client:EmoteCommandStart', { "mechanic2" }) -- changed to Mechanic2 - work on table is more realist
      makeEntityFaceCoord(plyped, Workbench.coords)
-     QBCore.Functions.Progressbar("keep_Crafting", "Crafting ", item_config.crafting.duration * 1000, false, false, {
+     QBCore.Functions.Progressbar("keep_Crafting", Lang:t('info.crafting_bar'), item_config.crafting.duration * 1000, false, false, {
           disableMovement = true,
           disableCarMovement = true,
           disableMouse = false,
